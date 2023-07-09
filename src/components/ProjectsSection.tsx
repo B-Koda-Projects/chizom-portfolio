@@ -6,8 +6,8 @@ export const ProjectsSection = () => {
   const projects = [
     { name: 'Aluta App', image: '/images/projects/project-1.png' },
     { name: 'Betrelate', image: '/images/projects/project-2.png' },
-    { name: 'CIPM', image: '/images/projects/project-3.png' },
-    { name: 'gotrip', image: '/images/projects/project-4.png' }
+    { name: 'gotrip', image: '/images/projects/project-3.png' },
+    { name: 'CIPM', image: '/images/projects/project-4.png' }
   ];
 
   const navigate = (type: string) => {
