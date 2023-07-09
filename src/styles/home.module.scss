@@ -1,0 +1,30 @@
+@import './mixins.module.scss';
+
+.main {
+  // display: flex;
+  // flex-direction: column;
+  // gap: 10rem;
+  section {
+    // padding: 0rem 7.5rem;
+    opacity: 0;
+    transform: translateY(-10rem);
+    transition: 0.5s !important;
+    padding: 0rem 2rem;
+    @include tablet {
+      padding: 0rem 4rem;
+    }
+    @include laptop {
+      padding: 0rem 7rem;
+    }
+    @include desktop {
+      padding: 0rem 12rem;
+    }
+    svg {
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    svg:hover {
+      transform: rotate(-45deg);
+    }
+  }
+}

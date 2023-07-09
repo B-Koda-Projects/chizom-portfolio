@@ -1,0 +1,71 @@
+@import '../mixins.module.scss';
+
+.skills_section {
+  color: #e8e8e9;
+  display: flex;
+  flex-direction: column;
+  margin: 10rem 0rem;
+  gap: 4rem;
+  @include laptop {
+    gap: 10rem;
+  }
+  h4 {
+    max-width: 76rem;
+    margin: 0rem auto;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 6rem;
+  }
+  .skill_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 116rem;
+    margin: 0rem auto;
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .skill {
+      min-height: 42rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      padding: 13.1rem 2rem 2rem;
+      border-radius: 0.6rem;
+      border: 0.1rem solid #e8e8e8;
+      background: linear-gradient(
+        129deg,
+        rgba(78, 78, 78, 0.33) 0%,
+        rgba(31, 31, 31, 0.61) 100%
+      );
+      backdrop-filter: blur(2.5rem);
+      h2 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        max-width: max-content;
+        // line-height: 2rem;
+        &::after {
+          content: '';
+          display: block;
+          width: 0rem;
+          height: 0.3rem;
+          // margin-top: 1rem;
+          position: relative;
+          // bottom: -1rem;
+          background-color: white;
+          transition: 0.5s;
+          opacity: 0.5;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+      p {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 2.6rem;
+      }
+    }
+  }
+}

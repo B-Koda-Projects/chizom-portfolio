@@ -1,0 +1,79 @@
+@import '../mixins.module.scss';
+
+.hero_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  gap: 4rem;
+  @include laptop {
+    gap: 15.4rem;
+    text-align: left;
+    flex-direction: row;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8rem;
+    order: 2;
+    @include laptop {
+      order: 1;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #e8e8e9;
+    h2 {
+      font-size: 4rem;
+      font-weight: 400;
+      margin: 0rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      justify-content: center;
+      @include laptop {
+        justify-content: flex-start;
+      }
+    }
+    h1 {
+      font-size: 6.4rem;
+      font-weight: 700;
+      margin: 0rem;
+    }
+  }
+  .link_buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+    // @include tablet {
+    //   flex-direction: column;
+    // }
+    @include tablet {
+      flex-direction: row;
+    }
+    a {
+      flex: 1;
+      @include button_style;
+      padding: 3.3rem 1rem;
+      width: 100%;
+    }
+  }
+
+  .image {
+    position: relative;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      transform: rotate(4deg);
+    }
+    order: 1;
+    @include laptop {
+      order: 2;
+    }
+  }
+}
