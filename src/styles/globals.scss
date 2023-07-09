@@ -21,6 +21,24 @@
   // animation: animate_in 0.5s ease-in-out;
 }
 
+/* Flashlight Overlay */
+:root {
+  cursor: none;
+}
+.custom_cursor {
+  background-color: rgba(255, 255, 255, 0.507);
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
+  background: #fff;
+  box-shadow: 0.5rem 1rem 5rem #888888;
+  opacity: 0.5;
+  pointer-events: none;
+  background-image: radial-gradient(white 30%, grey 70%);
+}
+
 button,
 input,
 textarea {
@@ -33,6 +51,8 @@ body {
   color: white;
   background-color: black;
   font-size: 62.5%;
+  scroll-behavior: smooth !important;
+  // cursor: none;
 }
 
 a {
