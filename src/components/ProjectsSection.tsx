@@ -24,21 +24,21 @@ export const ProjectsSection = () => {
       <div className={styles.section_header}>
         <h2>Some of my works</h2>
         <div className={styles.slider_buttons}>
-          <span onClick={() => navigate('back')}>
+          <a onClick={() => navigate('back')}>
             <IoArrowBack />
-          </span>
-          <span onClick={() => navigate('forward')}>
+          </a>
+          <a onClick={() => navigate('forward')}>
             <IoArrowForward />
-          </span>
+          </a>
         </div>
       </div>
       <div className={styles.slider_container}>
         <div className={styles.slider} id='slider_container'>
           {projects.map((project) => (
             <div className={styles.project} key={project.name}>
-              <div className={styles.project_overlay}>
+              <a className={styles.project_overlay}>
                 <p>{project.name}</p>
-              </div>
+              </a>
               <Image
                 src={project.image}
                 alt={project.name}

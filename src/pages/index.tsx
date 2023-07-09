@@ -23,7 +23,52 @@ export default function Home() {
   useEffect(() => {
     if (!loading) {
       const sections = Array.from(document.getElementsByTagName('section'));
-      const main_target = document.getElementById('main_page');
+      const anchor_tags = Array.from(document.getElementsByTagName('a'));
+      console.log(anchor_tags);
+
+      const root = document.getElementsByTagName('html')[0];
+
+      const cursor = document.getElementById('custom_cursor') as HTMLElement;
+      const pointer = document.getElementById('custom_pointer') as HTMLElement;
+
+      anchor_tags.forEach((tag) => {
+        tag.addEventListener('mouseenter', () => {
+          console.log('Moused Over');
+          // root.style.cssText = `
+          // --cursor-background: #ef6616a2 !important;
+          // --cursor-pointer: transparent !important;
+          // `;
+          cursor.style.backgroundColor = '#ef6616a2';
+          pointer.style.backgroundColor = 'transparent';
+
+          // document.documentElement.style.setProperty(
+          //   ' --cursor-background',
+          //   '#ef6616a2'
+          // );
+          // document.documentElement.style.setProperty(
+          //   '--cursor-pointer',
+          //   'transparent'
+          // );
+        });
+        tag.addEventListener('mouseout', () => {
+          console.log('Moused Out');
+          // root.style.cssText = `
+          // --cursor-background: transparent;
+          // --cursor-pointer: white;
+          // `;
+          cursor.style.backgroundColor = 'transparent';
+          pointer.style.backgroundColor = 'white';
+          // document.documentElement.style.setProperty(
+          //   ' --cursor-background',
+          //   'transparent'
+          // );
+          // document.documentElement.style.setProperty(
+          //   '--cursor-pointer',
+          //   'white'
+          // );
+        });
+      });
+
       const observer = new IntersectionObserver(
         (entries) =>
           entries.forEach((entry: any) => {

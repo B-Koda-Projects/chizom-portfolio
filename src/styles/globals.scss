@@ -12,12 +12,20 @@
   }
 }
 
+:root {
+  --orange: #ef6416;
+  // --cursor-background: transparent;
+  // --cursor-pointer: white;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
   padding: 0rem;
   margin: 0rem;
   font-size: 1.6rem;
+  --cursor-background: transparent;
+  --cursor-pointer: white;
   // animation: animate_in 0.5s ease-in-out;
 }
 
@@ -26,17 +34,26 @@
   cursor: none;
 }
 .custom_cursor {
-  background-color: rgba(255, 255, 255, 0.507);
-  height: 10rem;
-  width: 10rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   position: absolute;
   z-index: 5;
-  background: #fff;
-  box-shadow: 0.5rem 1rem 5rem #888888;
-  opacity: 0.5;
+  // box-shadow: 0.5rem 1rem 5rem #888888;
+  // opacity: 0.5;
   pointer-events: none;
-  background-image: radial-gradient(white 30%, grey 70%);
+  border: 0.15rem solid var(--orange);
+  background-color: var(--cursor-background);
+  transition: 0.1s;
+}
+.custom_pointer {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: var(--cursor-pointer);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
 }
 
 button,
@@ -59,4 +76,9 @@ a {
   color: inherit;
   text-decoration: none;
   font-size: inherit;
+  cursor: none;
+}
+a:hover {
+  --cursor-background: #ef6616a2;
+  --cursor-pointer: transparent;
 }
