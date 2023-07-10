@@ -33,7 +33,6 @@ export default function Home() {
 
       anchor_tags.forEach((tag) => {
         tag.addEventListener('mouseenter', () => {
-          console.log('Moused Over');
           cursor.style.backgroundColor = '#ef6616a2';
           pointer.style.backgroundColor = 'transparent';
         });
@@ -46,7 +45,6 @@ export default function Home() {
       const observer = new IntersectionObserver(
         (entries) =>
           entries.forEach((entry: any) => {
-            console.log(entry.isIntersecting);
             if (entry.isIntersecting) {
               entry.target.style.opacity = `1`;
               entry.target.style.transform = `translateY(0rem)`;
