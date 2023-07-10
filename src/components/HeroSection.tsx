@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from 'styles/components/herosection.module.scss';
 import { HeroSectionIcon } from './FigmaSVGS';
+import { email, name, professional_title, resume_link } from 'data/user_data';
 
 export const HeroSection = () => {
   return (
@@ -11,12 +12,14 @@ export const HeroSection = () => {
             <HeroSectionIcon />
             Hello, I’m
           </h2>
-          <h1>CHIZOM EGEONU</h1>
-          <h2>Product & UI/UX Designer</h2>
+          <h1>{name}</h1>
+          <h2>{professional_title}</h2>
         </div>
         <div className={styles.link_buttons}>
-          <a>Get In Touch</a>
-          <a>Download Resume</a>
+          <a href={`mailto:${email}?subject=Saying Hi`}>Get In Touch</a>
+          <a href={resume_link} download>
+            Download Resume
+          </a>
         </div>
       </div>
       <div className={styles.image}>

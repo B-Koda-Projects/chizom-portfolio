@@ -6,6 +6,12 @@
   // padding: 8.4rem 11.8rem !important;
   padding-top: 8.4rem !important;
   padding-bottom: 8.4rem !important;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  @include tablet {
+    gap: 9.8rem;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -54,8 +60,14 @@
     width: 100%;
   }
   .download_resume {
+    display: flex;
     a {
       @include button_style;
+      width: 100%;
+      @include tablet {
+        width: max-content;
+      }
+      // padding: 3.3rem 4.5rem;
     }
   }
 }

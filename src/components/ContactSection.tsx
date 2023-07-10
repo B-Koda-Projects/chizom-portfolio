@@ -1,3 +1,4 @@
+import { email } from 'data/user_data';
 import styles from 'styles/components/contactsection.module.scss';
 
 export const ContactSection = () => {
@@ -11,7 +12,7 @@ export const ContactSection = () => {
             they are expressed, nurtured, and brought to life.&quot; - Chat GPT
           </p>
         </div>
-        <a>Get In Touch</a>
+        <a href={`mailto:${email}?subject=Saying Hi`}>Get In Touch</a>
       </div>
     </section>
   );
