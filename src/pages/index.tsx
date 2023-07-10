@@ -6,6 +6,7 @@ import { PortfolioLinks } from 'components/PortfolioLinks';
 import { ProjectsSection } from 'components/ProjectsSection';
 import { SkillsSection } from 'components/SkillsSection';
 import { ToolsSection } from 'components/ToolsSection';
+import { about_me, name } from 'data/user_data';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -13,17 +14,8 @@ import styles from 'styles/home.module.scss';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const page_description = `I am a UI/UX designer with over 4 years experience with 
-  a passion for conceptualizing and designing digital products. I 
-  value creating interface designs that are clear, elegant, and 
-  user-friendly for complicated situations. I specialize in Users, 
-  from Interfaces to Experiences. My goal is to create things that 
-  just work. I Design pixel based solutions for the Web applications 
-  & Product, If you're a startup looking for help with designs for 
-  your app, a non-profit that wants to make an impact with your 
-  website, or a small business that needs a full redesign, I would 
-  love to help you find the right solutions that changes your game.`;
   const page_image = '/images/portfolio-image-1.png';
+  const page_title = `${name}'s Portfolio`;
 
   useEffect(() => {
     setTimeout(() => {
@@ -74,28 +66,28 @@ export default function Home() {
     <>
       <Head>
         {/* Basic */}
-        <title>Chizom&apos;s Portfolio</title>
-        <meta name='description' content={page_description} />
+        <title>{page_title}</title>
+        <meta name='description' content={about_me} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
 
         {/* Open Graph Meta Tags */}
-        <meta property='og:title' content={`Chizom's Portfolio`} />
+        <meta property='og:title' content={page_title} />
         <meta property='og:type' content='article' />
-        <meta property='og:description' content={page_description} />
+        <meta property='og:description' content={about_me} />
         <meta property='og:image' content={page_image} />
-        <meta property='og:site_name' content={`Chizom's Portfolio`} />
+        <meta property='og:site_name' content={page_title} />
 
         {/* Twitter  */}
-        <meta name='twitter:title' content={`Chizom's Portfolio`} />
-        <meta name='twitter:description' content={page_description} />
+        <meta name='twitter:title' content={page_title} />
+        <meta name='twitter:description' content={about_me} />
         <meta name='twitter:image' content={page_image} />
         <meta
           name='twitter:card'
           content={page_image ? 'summary_large_image' : 'summary'}
         />
-        <meta name='twitter:site' content='@chizomway' />
-        <meta name='twitter:image:alt' content={`Chizom's Portfolio`} />
+        <meta name='twitter:site' content='@ChizomEgeonu' />
+        <meta name='twitter:image:alt' content={page_title} />
       </Head>
       <main className={styles.main} id='main_page'>
         {loading ? (
