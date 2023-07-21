@@ -2,7 +2,7 @@ import { HTMLCSSIcon, UIUXIcon, UserResearchIcon } from 'components/FigmaSVGS';
 
 export const name = 'Chizom Egeonu';
 export const professional_title = 'Product & UI/UX Designer';
-export const email = 'chizom@micserah.com';
+export const email = 'chizom3@gmail.com';
 export const resume_link = '/resume/resume.pdf';
 export const what_do_i_do =
   'I conceptualize ideas for human centered digital products that create meaningful impact';
