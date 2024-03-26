@@ -3,7 +3,7 @@ import { HTMLCSSIcon, UIUXIcon, UserResearchIcon } from 'components/FigmaSVGS';
 export const name = 'Chizom Egeonu';
 export const professional_title = 'Product & UI/UX Designer';
 export const email = 'chizom3@gmail.com';
-export const resume_link = '/resume/resume.pdf';
+export const resume_link = '/resume/chizom-egeonu-resume.pdf';
 export const what_do_i_do =
   'I conceptualize ideas for human centered digital products that create meaningful impact';
 export const about_me = `I am a UI/UX designer with over 4 years experience with a 
@@ -68,15 +68,25 @@ export const projects = [
     url: 'https://betrelate.com'
   },
   {
-    name: 'gotrip',
-    image: '/images/projects/project-3.png',
-    url: 'https://www.linkedin.com/in/gotrip-travel-60b05663/'
+    name: 'Cafe One',
+    image: '/images/projects/project-5.png',
+    url: 'https://www.behance.net/gallery/194813185/Cafe-Workspace-Booking-App'
   },
   {
-    name: 'CIPM',
-    image: '/images/projects/project-4.png',
-    url: 'https://cipmnigeria.org/'
+    name: 'Payflex',
+    image: '/images/projects/project-6.png',
+    url: 'https://www.behance.net/gallery/194719581/Payflex-Mobile-Banking-Application'
   }
+  // {
+  //   name: 'gotrip',
+  //   image: '/images/projects/project-5.png',
+  //   url: 'https://www.linkedin.com/in/gotrip-travel-60b05663/'
+  // },
+  // {
+  //   name: 'CIPM',
+  //   image: '/images/projects/project-6.png',
+  //   url: 'https://cipmnigeria.org/'
+  // }
 ];
 export const social_links = [
   {
