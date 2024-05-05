@@ -58,6 +58,16 @@ export const tools = [
 ];
 export const projects = [
   {
+    name: 'Cafe One',
+    image: '/images/projects/project-5.png',
+    url: 'https://www.notion.so/Cafe-One-UI-UX-Case-Study-98de94ff6bc74a3dafb079f33719d501?pvs=4'
+  },
+  {
+    name: 'Payflex',
+    image: '/images/projects/project-6.png',
+    url: 'https://www.notion.so/PayFlex-UI-UX-Case-study-34b06323903c4192b814adaf0d9dba9f'
+  },
+  {
     name: 'Aluta App',
     image: '/images/projects/project-1.png',
     url: 'https://alutaapp.io/'
@@ -66,16 +76,6 @@ export const projects = [
     name: 'Betrelate',
     image: '/images/projects/project-2.png',
     url: 'https://betrelate.com'
-  },
-  {
-    name: 'Cafe One',
-    image: '/images/projects/project-5.png',
-    url: 'https://www.behance.net/gallery/194813185/Cafe-Workspace-Booking-App'
-  },
-  {
-    name: 'Payflex',
-    image: '/images/projects/project-6.png',
-    url: 'https://www.behance.net/gallery/194719581/Payflex-Mobile-Banking-Application'
   }
   // {
   //   name: 'gotrip',
