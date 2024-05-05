@@ -32,8 +32,8 @@ export const ProjectsSection = () => {
             <div className={styles.project} key={project.name}>
               <a
                 href={project.url}
-                target='_blank'
-                rel='noopener noreferrer'
+                // target='_blank'
+                // rel='noopener noreferrer'
                 className={styles.project_overlay}
               >
                 <p>{project.name}</p>
